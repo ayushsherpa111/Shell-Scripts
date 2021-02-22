@@ -13,13 +13,7 @@ digitStr() {
     done
 }
 
-combine(){
-    num=$1
-    [ $num -gt 99 ] && wrd="$(echo ${num:0:1} | digitStr ) hundred"&& num="${num:1}"
-    wrd="${wrd} $(echo $num | digitStr )"
-    [ $2 -ne 0 ] && wrd="${wrd} ${pos[$2]}"
-    echo $wrd
-}
+combine(){ num=$1;[ $num -gt 99 ] && wrd="$(echo ${num:0:1} | digitStr ) hundred"&& num="${num:1}";wrd="${wrd} $(echo $num | digitStr )";[ $2 -ne 0 ] && wrd="${wrd} ${pos[$2]}";echo $wrd; }
 
 _ () {
     tempNum=$1
