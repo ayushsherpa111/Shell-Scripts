@@ -3,7 +3,7 @@
 echo -n "Script Name: "
 read SCRIPT
 
-if [ -z $SCRIPT ]; 
+if [ -z $SCRIPT ];
 then
   echo "Script Name Invalid"
   exit
